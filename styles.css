@@ -1,0 +1,191 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #007acc;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    background-image: linear-gradient(to right, #007acc, #00b4db);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Botão de chamada para ação */
+.cta-btn {
+    background-color: #005f99;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #004f7a;
+}
+
+/* Estilos do carrossel */
+.carousel {
+    background-color: #eef6fc;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.carousel h2 {
+    margin-bottom: 30px;
+    color: #005f99;
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.carousel-item h3 {
+    color: #005f99;
+}
+
+/* Estilos da seção "Sobre" */
+#about {
+    background-color: #f2f2f2;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+    color: #007acc;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #555;
+    padding: 0 15px;
+}
+
+#about .cta-btn {
+    background-color: #007acc;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#about .cta-btn:hover {
+    background-color: #005f99;
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos específicos para a seção "Sobre" */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2em;
+    }
+
+    #about p {
+        font-size: 1.1em;
+    }
+
+    #about .cta-btn {
+        padding: 12px 30px;
+        font-size: 1.1em;
+    }
+}
+
+/* Estilos da seção de contato */
+#contact {
+    background-color: #eef6fc;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 15px 30px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #005f99;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        padding: 10px;
+    }
+
+    #contact input, #contact textarea {
+        width: 90%;
+    }
+}
