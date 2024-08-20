@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #eef6fc;
     color: #333;
     line-height: 1.6;
 }
@@ -48,9 +48,11 @@ header p {
     text-align: center;
     overflow: hidden; 
     position: relative;
+    margin-bottom: 20%;
 }
 
 .carousel h2 {
+    top: 1px;
     margin-bottom: 50px;
     color: #005f99;
 }
@@ -110,7 +112,7 @@ header p {
 
 /* Estilos da seção "Sobre" */
 #about {
-    background-color: #f2f2f2;
+    background-color: #bdb9b9;
     padding: 60px 20px;
     text-align: center;
     color: #333;
