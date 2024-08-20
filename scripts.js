@@ -4,7 +4,6 @@ const totalItems = items.length;
 
 function showItem(index) {
     items.forEach((item, i) => {
-        item.style.transform = `translateX(-${index * 100}%)`;
         item.classList.remove('show');
     });
     items[index].classList.add('show');
@@ -15,7 +14,7 @@ function nextItem() {
     showItem(currentIndex);
 }
 
-setInterval(nextItem, 5000);
+setInterval(nextItem, 5000); // Tempo ajustado para ser mais lento
 
 document.addEventListener('DOMContentLoaded', () => {
     showItem(currentIndex);
