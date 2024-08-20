@@ -40,12 +40,13 @@ header p {
 .cta-btn:hover {
     background-color: #004f7a;
 }
-
 /* Estilos do carrossel */
 .carousel {
     background-color: #eef6fc;
     padding: 50px 0;
     text-align: center;
+    overflow: hidden; /* Garante que os itens fora do viewport não apareçam */
+    position: relative;
 }
 
 .carousel h2 {
@@ -55,8 +56,8 @@ header p {
 
 .carousel-container {
     display: flex;
-    overflow: hidden;
     width: 100%;
+    animation: scroll 20s linear infinite; /* Animação contínua */
 }
 
 .carousel-item {
@@ -64,11 +65,52 @@ header p {
     padding: 20px;
     box-sizing: border-box;
     color: #333;
+    flex-shrink: 0;
 }
 
 .carousel-item h3 {
     color: #005f99;
 }
+/* Estilos do carrossel */
+.carousel {
+    background-color: #eef6fc;
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden; /* Garante que os itens fora do viewport não apareçam */
+    position: relative;
+}
+
+.carousel h2 {
+    margin-bottom: 30px;
+    color: #005f99;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 1s ease; /* Transição suave ao deslizar */
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 1s ease; /* Transição suave para o efeito de aparecimento */
+}
+
+.carousel-item.show {
+    opacity: 1;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .carousel-item {
+        padding: 10px;
+    }
+}
+
 
 /* Estilos da seção "Sobre" */
 #about {
