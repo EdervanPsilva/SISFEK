@@ -51,14 +51,14 @@ header p {
 }
 
 .carousel h2 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     color: #005f99;
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .carousel-item {
@@ -90,6 +90,7 @@ header p {
 }
 
 .carousel-item p {
+    margin-bottom: 15px;
     font-size: 18px;
     color: #333;
 }
