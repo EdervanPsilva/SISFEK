@@ -306,3 +306,152 @@ body {
     }
 }
 
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Para evitar rolagem horizontal indesejada */
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff; /* Cor azul */
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.menu-icon:hover {
+    background-color: #0056b3; /* Cor azul mais escura no hover */
+}
+
+.menu-bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff; /* Cor das barras do menu */
+    margin: 6px auto;
+    transition: all 0.3s ease;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon .menu-bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 11px; /* Ajuste fino para alinhar o X */
+}
+
+#menu-toggle:checked + .menu-icon .menu-bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-icon .menu-bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 11px; /* Ajuste fino para alinhar o X */
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 60px; /* Distância do topo do botão */
+    left: 15px;
+    width: calc(100% - 30px); /* Largura ajustada para a tela */
+    max-width: 300px; /* Largura máxima do menu */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    z-index: 999;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Tamanho menor para a lista */
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ff5733; /* Cor de destaque ao passar o mouse */
+}
+
+#menu-toggle:checked ~ .menu {
+    display: block;
+    transform: translateY(0); /* Garantir que o menu apareça corretamente */
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        top: 10px;
+        left: 10px;
+        padding: 12px;
+    }
+
+    .menu-bar {
+        width: 25px;
+        height: 2px;
+        margin: 5px auto;
+    }
+
+    .menu {
+        top: 60px;
+        width: calc(100% - 20px);
+        max-width: 250px; /* Ajuste a largura máxima em telas pequenas */
+    }
+
+    .menu a {
+        font-size: 14px; /* Tamanho menor em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-icon {
+        top: 8px;
+        left: 8px;
+        padding: 10px;
+    }
+
+    .menu-bar {
+        width: 20px;
+        height: 2px;
+        margin: 4px auto;
+    }
+
+    .menu {
+        top: 60px;
+        width: calc(100% - 16px);
+        max-width: 200px; /* Ajuste a largura máxima em telas muito pequenas */
+    }
+
+    .menu a {
+        font-size: 12px; /* Tamanho menor em telas muito pequenas */
+    }
+}
