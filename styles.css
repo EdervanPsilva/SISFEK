@@ -41,75 +41,6 @@ header p {
     background-color: #004f7a;
 }
 
-/* Estilos do carrossel */
-.carousel {
-    background-color: #eef6fc;
-    padding: 50px 0;
-    text-align: center;
-    overflow: hidden; 
-    position: relative;
-    margin-bottom: 20%;
-}
-
-.carousel h2 {
-    top: 1px;
-    margin-bottom: 50px;
-    color: #005f99;
-}
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease, visibility 1s ease; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.carousel-item.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.carousel-item h3 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #005f99;
-}
-
-.carousel-item p {
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #333;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .carousel-item h3 {
-        font-size: 20px;
-    }
-    .carousel-item p {
-        font-size: 16px;
-    }
-    .carousel-item {
-        padding: 10px;
-    }
-}
-
 /* Estilos da seção "Sobre" */
 #about {
     background-color: #bdb9b9;
@@ -217,15 +148,161 @@ footer {
         font-size: 2em;
     }
 
-    .carousel-container {
-        flex-direction: column;
-    }
-
-    .carousel-item {
-        padding: 10px;
-    }
-
     #contact input, #contact textarea {
         width: 90%;
     }
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden; /* Para evitar rolagem horizontal */
+}
+
+.carousel-container {
+    width: 90vw; /* 90% da largura da viewport */
+    height: 90vh; /* 90% da altura da viewport */
+    margin: 60px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+    padding: 10px; /* Ajustado para se adaptar melhor */
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Ajustado para ocupar 100% da altura do container */
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item h1 {
+    font-size: 2rem;
+    color: #005f99;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.carousel-item p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.carousel-link {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #2980b9;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.carousel-link:hover {
+    background-color: #1f5f8a;
+    transform: scale(1.05);
+}
+
+/* Botões pequenos e discretos */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    opacity: 0.5;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+.carousel-buttons button:focus {
+    outline: none;
+}
+
+.carousel-buttons .prev {
+    margin-left: 10px;
+}
+
+.carousel-buttons .next {
+    margin-right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item {
+        padding: 20px;
+    }
+
+    .carousel-item h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-link {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        padding: 10px;
+    }
+
+    .carousel-item h1 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-item p {
+        font-size: 0.8rem;
+    }
+
+    .carousel-link {
+        padding: 8px 16px;
+    }
+
+    .carousel-buttons button {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+}
+
