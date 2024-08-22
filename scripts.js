@@ -33,3 +33,39 @@ setInterval(nextSlide, slideInterval);
 
 // Inicia o carrossel com o primeiro item
 showSlide(currentSlide);
+
+// Adiciona funcionalidade de swipe para celular
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.querySelector('.carousel-container').addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.querySelector('.carousel-container').addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+});
+
+function handleGesture() {
+    if (touchEndX < touchStartX - 50) {
+        nextSlide(); // deslizar para a esquerda
+    }
+    if (touchEndX > touchStartX + 50) {
+        prevSlide(); // deslizar para a direita
+    }
+}
+
+
+
+// Fechar menu quando clicar na tela
+document.addEventListener('click', function (event) {
+    var menuToggle = document.getElementById('menu-toggle');
+    var menuContainer = document.querySelector('.menu-container');
+
+    // Verifica se o clique foi fora do menu
+    if (menuToggle.checked && !menuContainer.contains(event.target)) {
+        menuToggle.checked = false;
+    }
+
+});
