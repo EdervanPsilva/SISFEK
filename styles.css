@@ -225,6 +225,15 @@ body {
     transform: scale(1.05);
 }
 
+.carousel-item img {
+    max-width: 100%; /* A imagem não será maior que o container */
+    max-height: 100%; /* Limita a altura da imagem ao tamanho do container */
+    width: auto; /* Mantém a proporção da largura */
+    height: auto; /* Mantém a proporção da altura */
+    display: block; /* Garante que a imagem ocupe o espaço disponível */
+    margin: 0 auto; /* Centraliza a imagem no container */
+}
+
 /* Botões pequenos e discretos */
 .carousel-buttons {
     position: absolute;
@@ -281,6 +290,11 @@ body {
     .carousel-link {
         padding: 10px 20px;
     }
+
+    .carousel-item img {
+        max-width: 80%; /* Ajusta o tamanho da imagem em telas menores */
+        max-height: 80%; /* Ajusta a altura da imagem em telas menores */
+    }
 }
 
 @media (max-width: 480px) {
@@ -303,6 +317,11 @@ body {
     .carousel-buttons button {
         padding: 6px;
         font-size: 0.8rem;
+    }
+
+    .carousel-item img {
+        max-width: 70%; /* Ajusta o tamanho da imagem em telas menores */
+        max-height: 70%; /* Ajusta a altura da imagem em telas menores */
     }
 }
 
