@@ -227,7 +227,7 @@ body {
 
 .carousel-item img {
     max-width: 100%; /* A imagem não será maior que o container */
-    max-height: 100%; /* Limita a altura da imagem ao tamanho do container */
+    max-height: 80%; /* Ajusta a altura da imagem para se adaptar ao container */
     width: auto; /* Mantém a proporção da largura */
     height: auto; /* Mantém a proporção da altura */
     display: block; /* Garante que a imagem ocupe o espaço disponível */
@@ -248,12 +248,12 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     color: #ffffff;
     border: none;
-    padding: 8px;
+    padding: 12px;
     border-radius: 50%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .carousel-buttons button:hover {
@@ -293,7 +293,7 @@ body {
 
     .carousel-item img {
         max-width: 80%; /* Ajusta o tamanho da imagem em telas menores */
-        max-height: 80%; /* Ajusta a altura da imagem em telas menores */
+        max-height: 70%; /* Ajusta a altura da imagem em telas menores */
     }
 }
 
@@ -315,15 +315,16 @@ body {
     }
 
     .carousel-buttons button {
-        padding: 6px;
-        font-size: 0.8rem;
+        padding: 10px;
+        font-size: 1rem;
     }
 
     .carousel-item img {
         max-width: 70%; /* Ajusta o tamanho da imagem em telas menores */
-        max-height: 70%; /* Ajusta a altura da imagem em telas menores */
+        max-height: 60%; /* Ajusta a altura da imagem em telas menores */
     }
 }
+
 
 /* styles.css */
 
