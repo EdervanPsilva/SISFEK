@@ -179,7 +179,7 @@ body {
 .carousel-item {
     display: none;
     text-align: center;
-    padding: 10px; /* Ajustado para se adaptar melhor */
+    padding: 20px; /* Ajustado para dar espaço ao conteúdo */
     position: absolute;
     width: 100%;
     height: 100%; /* Ajustado para ocupar 100% da altura do container */
@@ -226,13 +226,12 @@ body {
 }
 
 .carousel-item img {
-    max-width: 100%; /* A imagem não será maior que o container */
-    max-height: 80%; /* Ajusta a altura da imagem para não exceder o container */
-    width: auto; /* Mantém a proporção da largura */
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do container */
     height: auto; /* Mantém a proporção da altura */
+    max-height: 80%; /* Limita a altura máxima para não exceder o container */
+    object-fit: cover; /* Garante que a imagem cubra o container sem distorção */
     display: block; /* Garante que a imagem ocupe o espaço disponível */
     margin: 0 auto; /* Centraliza a imagem no container */
-    object-fit: contain; /* Garante que a imagem se ajuste ao container sem distorção */
 }
 
 /* Botões pequenos e discretos */
@@ -293,7 +292,7 @@ body {
     }
 
     .carousel-item img {
-        max-width: 90%; /* Ajusta o tamanho da imagem em telas menores */
+        max-width: 100%; /* Ajusta o tamanho da imagem em telas menores */
         max-height: 70%; /* Ajusta a altura da imagem em telas menores */
     }
 }
