@@ -470,20 +470,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: width 0.3s, height 0.3s;
 }
 
 .whatsapp-float img {
     width: 35px;
     height: 35px;
+    transition: width 0.3s, height 0.3s;
 }
 
-/* Responsividade */
+/* Tamanho médio para tablets */
 @media (max-width: 768px) {
     .whatsapp-float {
         width: 50px;
         height: 50px;
-        bottom: 15px;
-        right: 15px;
     }
 
     .whatsapp-float img {
@@ -492,12 +492,11 @@ body {
     }
 }
 
+/* Tamanho menor para smartphones */
 @media (max-width: 480px) {
     .whatsapp-float {
         width: 40px;
         height: 40px;
-        bottom: 10px;
-        right: 10px;
     }
 
     .whatsapp-float img {
@@ -505,3 +504,4 @@ body {
         height: 25px;
     }
 }
+
