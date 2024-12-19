@@ -7,6 +7,15 @@ body {
     color: #333;
     line-height: 1.6;
 }
+ /* Centraliza a logo no topo da página */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+    }
+.logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    }
 
 /* Estilos do cabeçalho */
 header {
@@ -372,6 +381,7 @@ body {
 .carousel-container {
     position: relative;
     max-width: 1200px;
+    height: 600px;
     margin: 40px auto;
     overflow: hidden;
     border-radius: 10px;
