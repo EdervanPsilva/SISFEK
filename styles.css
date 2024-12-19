@@ -17,6 +17,19 @@ body {
     height: auto;
     }
 
+/* Torna a logo responsiva */
+.logo {
+    max-width: 100%; /* Limita a largura ao tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    }
+
+/* Opcional: Ajusta margens e tamanhos em telas menores */
+@media (max-width: 768px) {
+        .logo-container {
+        margin: 10px 0;
+        }
+    }
+
 /* Estilos do cabeçalho */
 header {
     background-color: #007acc;
